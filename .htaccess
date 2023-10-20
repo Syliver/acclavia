@@ -1,0 +1,11 @@
+#Turn Rewrite Engine On
+
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{THE_REQUEST} connection.php[?\s/] [NC]
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html
